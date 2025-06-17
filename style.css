@@ -1,0 +1,351 @@
+/* --- TEMA BARU: MIDNIGHT TEAL - Dibuat oleh AI Asisten Anda --- */
+
+/* 1. Impor Font Baru yang Lebih Profesional: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fira+Code:wght@500&display=swap');
+
+/* 2. Palet Warna Baru yang Eksklusif */
+:root {
+    --dark-navy: #0A192F;         /* Warna background utama, sangat gelap & kaya */
+    --navy: #112240;              /* Warna untuk elemen sekunder seperti kartu proyek */
+    --light-slate: #CCD6F6;        /* Warna teks utama, mudah dibaca */
+    --slate: #8892B0;              /* Warna teks sekunder/deskripsi */
+    --teal: #64FFDA;               /* Warna aksen utama yang cerah dan modern */
+    --teal-tint: rgba(100, 255, 218, 0.1); /* Bayangan/background transparan untuk hover */
+    --border-radius: 6px;
+    --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* 3. Global Reset & Style Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-navy);
+    color: var(--slate);
+    line-height: 1.6;
+}
+
+#tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+h1, h2, h3 {
+    color: var(--light-slate);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+section {
+    padding: 6rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 4. Elemen yang Didesain Ulang (Tombol, Link, dll) */
+.cta-button {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--teal);
+    border: 1px solid var(--teal);
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Fira Code', monospace; /* Font khusus untuk tombol agar 'techy' */
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background-color: var(--teal-tint);
+    transform: translateY(-3px);
+}
+
+/* 5. Header & Navigasi dengan Gaya Baru */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(10, 25, 47, 0.85); /* Warna Dark Navy transparan */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--navy);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--teal);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--light-slate);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--teal);
+}
+
+/* 6. Hero Section yang Ditingkatkan */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.hero-text .subtitle {
+    font-size: 1.5rem;
+    color: var(--teal);
+    font-weight: 600;
+    margin: 0.5rem 0 1.5rem 0;
+    font-family: 'Fira Code', monospace;
+}
+
+.hero-text .description {
+    font-size: 1.1rem;
+    color: var(--slate);
+    margin-bottom: 2.5rem;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--teal);
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.hero-image img:hover {
+    opacity: 1;
+    box-shadow: 0 0 25px var(--teal-tint);
+}
+
+/* 7. About & Skills Section */
+#about p {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    color: var(--slate);
+}
+
+.skills {
+    text-align: center;
+}
+
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+.skill-icons i {
+    color: var(--slate);
+    transition: var(--transition);
+}
+
+.skill-icons i:hover {
+    color: var(--teal);
+    transform: translateY(-5px);
+}
+
+/* 8. Desain Kartu Proyek yang Lebih Premium */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: var(--navy);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 30px -15px rgba(2,12,27,0.7);
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.project-card:hover img {
+    opacity: 1;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    color: var(--slate);
+    margin-bottom: 1rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+}
+
+.project-tags span {
+    background-color: var(--dark-navy);
+    color: var(--teal);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: var(--light-slate);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    color: var(--teal);
+}
+
+.project-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover i {
+    transform: translateX(5px);
+}
+
+/* 9. Contact & Social Links */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    color: var(--slate);
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    margin-top: 3rem;
+}
+
+.social-links a {
+    color: var(--slate);
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--teal);
+    transform: translateY(-5px);
+}
+
+/* 10. Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Fira Code', monospace;
+    color: var(--slate);
+}
+
+footer .fa-heart {
+    color: var(--teal);
+}
+
+/* 11. Animasi & Responsivitas (Tetap Sama) */
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    h2 { font-size: 2rem; }
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+        min-height: auto;
+        padding-top: 120px;
+    }
+    .hero-text h1 { font-size: 2.8rem; }
+    .hero-image img { width: 200px; height: 200px; }
+    nav ul { display: none; }
+}
